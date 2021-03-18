@@ -11,5 +11,7 @@ Criar um menu onde o usuário irá informar qual a atividade ele deseja realizar
 3. Alterar (Metódo UPDATE)
 4. Excluir (Metódo DELETE)
 
-Além disso criar testes Junit para testar a maior parte do código
+Além disso criar testes Junit para testar a maior parte do código.
+
+Para testar o código na sua máquina você deve rodar a classe Programa do pacote usuario.aplicacao
 
