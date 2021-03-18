@@ -45,11 +45,11 @@ public class Conexao {
 		
 		Statement stmt = conn.createStatement();	
 		
-		stmt.execute("CREATE DATABASE IF NOT EXISTS teste");
+		stmt.execute("CREATE DATABASE IF NOT EXISTS desafiofinalctt");
 		
 		stmt = conn.createStatement();
 		
-		stmt.execute("USE teste");
+		stmt.execute("USE desafiofinalctt");
 		
 		stmt = conn.createStatement();
 		
