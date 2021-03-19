@@ -77,8 +77,7 @@ public class TestesJunit {
 		}
 	}
 
-	@Test
-	@Ignore
+	@Test	
 	public void testSave() {
 
 		Usuario usuario = new Usuario();
@@ -100,10 +99,19 @@ public class TestesJunit {
 
 	}
 
-	@Test
-	@Ignore
+	@Test	
 	public void testGetUsuariosWithName() {
 		usuario.setNome("mayara");
+		List<Usuario> listaVazia = new ArrayList<Usuario>();
+		List<Usuario> usuarios = usuarioMetodos.getUsuarioWithName(usuario);
+
+		assertNotEquals("Não foi possível!", listaVazia, usuarios);
+
+	}
+	
+	@Test	
+	public void testGetUsuariosWithSobrenome() {
+		usuario.setNome("lima");
 		List<Usuario> listaVazia = new ArrayList<Usuario>();
 		List<Usuario> usuarios = usuarioMetodos.getUsuarioWithName(usuario);
 
@@ -119,8 +127,7 @@ public class TestesJunit {
 		assertNotNull("Não foi possível encontrar o Id!", usuarioMetodos.getUsuarioWithId(usuario));
 	}
 
-	@Test
-	@Ignore
+	@Test	
 	public void testUpdateNome() {
 
 		UsuarioMetodos usuarioMetodos = new UsuarioMetodos();
@@ -135,7 +142,6 @@ public class TestesJunit {
 	}
 
 	@Test
-	@Ignore
 	public void testUpdateEmail() {
 
 		UsuarioMetodos usuarioMetodos = new UsuarioMetodos();
@@ -149,8 +155,7 @@ public class TestesJunit {
 		assertEquals("Erro ao atualizar!", 1, usuarioMetodos.update(usuario, "Email"));
 	}
 
-	@Test
-	@Ignore
+	@Test	
 	public void testUpdateSenha() {
 
 		UsuarioMetodos usuarioMetodos = new UsuarioMetodos();
@@ -164,8 +169,7 @@ public class TestesJunit {
 		assertEquals("Erro ao atualizar!", 1, usuarioMetodos.update(usuario, "Senha"));
 	}
 
-	@Test
-	@Ignore
+	@Test	
 	public void testDelete() {
 		UsuarioMetodos usuarioMetodos = new UsuarioMetodos();
 
@@ -176,8 +180,7 @@ public class TestesJunit {
 		assertEquals("Erro ao deletar!", 1, usuarioMetodos.delete(usuario));
 	}
 
-	@Test
-	@Ignore
+	@Test	
 	public void testGetLastId() {
 		int resultado = usuarioMetodos.getLastId();
 		assertEquals(35, resultado);
